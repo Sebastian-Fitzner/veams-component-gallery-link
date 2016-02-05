@@ -28,7 +28,7 @@ This blueprint is based on the blueprint of Veams-Components.
 ### Include: SCSS
 
 ``` scss
-// @INSERT :: START @id: scss-import, @tag: component
+// @INSERT :: START @tag: scss-import , @tag: component
 @import "components/_c-gallery-link";
 // @INSERT :: END
 ```
@@ -37,14 +37,14 @@ This blueprint is based on the blueprint of Veams-Components.
 
 #### Import
 ``` js
-// @INSERT :: START @id: js-import, @tag: component
+// @INSERT :: START @tag: js-import , @tag: component
 import GalleryLink from './modules/gallery-link/gallery-link';
 // @INSERT :: END
 ```
 
 #### Initializing in Veams V2
 ``` js
-// @INSERT :: START @id: js-init-v2, @tag: component
+// @INSERT :: START @tag: js-init-v2 , @tag: component
 /**
  * Init Form
  */
@@ -58,7 +58,7 @@ Helpers.loadModule({
 
 #### Initializing in Veams V3
 ``` js
-// @INSERT :: START @id: js-init-v3, @tag: component
+// @INSERT :: START @tag: js-init-v3  , @tag: component
 /**
  * Init Form
  */
