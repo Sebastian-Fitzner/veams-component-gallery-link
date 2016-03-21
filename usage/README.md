@@ -2,6 +2,9 @@
 
 This blueprint is based on the blueprint of Veams-Components.
 
+## Requirements 
+- `veams-block-overlay`
+
 ## Usage
 
 ### Include: Page

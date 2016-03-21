@@ -144,7 +144,7 @@ class Gallery extends AppModule {
 	}
 
 	publish(data) {
-		App.Vent.trigger(App.EVENTS.overlayOpen, {
+		App.Vent.trigger(App.EVENTS.overlay.open, {
 				data: data
 			}
 		);
