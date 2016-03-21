@@ -35,7 +35,7 @@ class Gallery extends AppModule {
 	 */
 	constructor(obj) {
 		let options = {
-			element: '[data-js-atom="gallery-link"]', // element which executes opening of gallery
+			element: '[data-js-atom="gallery"]', // element which executes opening of gallery
 			dataAttr: 'js-content',
 			groupedBy: 'data-js-group' // attribute which will be used for grouping
 		};
@@ -95,7 +95,7 @@ class Gallery extends AppModule {
 		let handleClick = this.handleClick.bind(this);
 
 		// Global events
-		App.Vent.on(App.EVENTS.galleryOpen, render);
+		App.Vent.on(App.EVENTS.gallery.open, render);
 
 		// Local events
 		this.links.on(App.clickHandler, handleClick);

@@ -1,4 +1,4 @@
-# Gallery Link
+# Gallery
 
 This blueprint is based on the blueprint of Veams-Components.
 
@@ -10,17 +10,17 @@ This blueprint is based on the blueprint of Veams-Components.
 ### Include: Page
 
 ``` hbs
-{{! @INSERT :: START @id: gallery-link, @tag: component }}
+{{! @INSERT :: START @id: gallery, @tag: component }}
 {{! WrapWith START: Form Wrapper }}
-{{#with gallery-link-bp}}
-	{{#wrapWith "c-gallery-link"
+{{#with gallery-bp}}
+	{{#wrapWith "c-gallery"
 	context=options.context
 	ajax=options.ajax
 	classes=options.classes
 	method=options.method
 	}}
 		{{#each fieldsets}}
-			{{> c-gallery-link__fieldset }}
+			{{> c-gallery__fieldset }}
 		{{/each}}
 	{{/wrapWith}}
 {{/with}}
@@ -32,7 +32,7 @@ This blueprint is based on the blueprint of Veams-Components.
 
 ``` scss
 // @INSERT :: START @tag: scss-import , @tag: component
-@import "components/_c-gallery-link";
+@import "components/_c-gallery";
 // @INSERT :: END
 ```
 
@@ -41,7 +41,7 @@ This blueprint is based on the blueprint of Veams-Components.
 #### Import
 ``` js
 // @INSERT :: START @tag: js-import , @tag: component
-import GalleryLink from './modules/gallery-link/gallery-link';
+import Gallery from './modules/gallery/gallery';
 // @INSERT :: END
 ```
 
@@ -49,11 +49,11 @@ import GalleryLink from './modules/gallery-link/gallery-link';
 ``` js
 // @INSERT :: START @tag: js-init-v2 , @tag: component
 /**
- * Init Form
+ * Init Gallery
  */
 Helpers.loadModule({
-	el: '[data-js-module="gallery-link"]',
-	module: GalleryLink,
+	el: '[data-js-module="gallery"]',
+	module: Gallery,
 	context: context
 });
 // @INSERT :: END
@@ -63,12 +63,24 @@ Helpers.loadModule({
 ``` js
 // @INSERT :: START @tag: js-init-v3  , @tag: component
 /**
- * Init Form
+ * Init Gallery
  */
 Helpers.loadModule({
-	domName: 'gallery-link',
-	module: GalleryLink,
+	domName: 'gallery',
+	module: Gallery,
 	context: context
 });
+// @INSERT :: END
+```
+
+#### Custom Events
+``` js
+// @INSERT :: START @tag: js-events //
+/**
+ * Events Gallery
+ */
+EVENTS.gallery = {
+	open: 'gallery:open'
+};
 // @INSERT :: END
 ```
