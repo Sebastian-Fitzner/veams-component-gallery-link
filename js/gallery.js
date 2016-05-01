@@ -4,7 +4,8 @@
  * This module provides a way to open images in the overlay and
  * create a group of images as gallery
  *
- * @module gallery
+ * @module Gallery
+ * @version v1.0.5
  *
  * @author Sebastian Fitzner
  */
@@ -41,9 +42,22 @@ class Gallery extends AppModule {
 		};
 
 		super(obj, options);
+		App.registerModule && App.registerModule(Gallery.info, this.el);
 	}
 
 	// GETTER AND SETTER
+	/**
+	 * Get module information
+	 */
+	static get info() {
+		return {
+			name: 'Gallery',
+			version: '1.0.5',
+			vc: true,
+			mod: false // set to true if source was modified in project
+		};
+	}
+
 	get data() {
 		return this._data;
 	}

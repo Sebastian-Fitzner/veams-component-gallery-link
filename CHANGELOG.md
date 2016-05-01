@@ -1,3 +1,6 @@
+### v1.0.5
+- added global module registry
+
 ### v1.0.4
 - renamed gallery-link to gallery
 
